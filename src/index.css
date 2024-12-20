@@ -2,31 +2,115 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: #f8f9fa;
 }
 
 header {
   padding: 1em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+header h1 a:hover {
+  color: #6c757d !important;
+  transition: color 0.3s ease;
+}
+.nav-link {
+  font-weight: 500;
+  color: #495057;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #e9ecef;
+  color: #212529;
 }
 
 main {
   flex: 1;
-  padding: 1em;
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 footer {
-  padding: 1em;
+  padding: 1.5em;
   text-align: center;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
 .cat-card {
-  border: 1px solid #ddd;
-  text-align: center;
-  height: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  height: 300px;
+  background: white;
+}
+
+.cat-card:hover {
+  transform: translateY(-5px);
 }
 
 .cat-info {
-  background: #f8f9fa;
-  border-radius: 4px;
+  padding: 1rem;
+  background: white;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Form  */
+.form-control, .form-select {
+  border-radius: 8px;
+  padding: 0.75rem;
+  border: 2px solid #dee2e6;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+.btn-primary {
+  background-color: #495057;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #343a40;
+  transform: translateY(-2px);
+}
+
+
+h2 {
+  color: #343a40;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #495057;
+  border-radius: 100px;
+}
+
+/* Filter  */
+.filter-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
 }
